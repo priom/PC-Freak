@@ -1,0 +1,205 @@
+/* desktop.css */
+
+/**********************************************************
+global settings to remove any default padding and margins */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/**********************************************************
+The following line may be redundant, but does no harm.    */
+main, header, footer, nav, article { display: block; }
+
+/********************************************************
+width and margin properties set here apply only to body;
+font properties set here will be inherited throughout   */
+body {
+  background-color: white;
+  color: black;
+  width: 900px;
+  margin: 20px auto 0 auto;
+  border: 8px solid black;
+  border-radius: 25px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h3 {
+  color: #e60000;
+}
+/**************************************************
+individual element margins set by trial and error */
+h3 { margin: .5em 0 .2em; }
+p { margin: 0 .2em .7em 0; }
+
+/*********************************************
+company logo appears at the top of each page */
+div#logo {
+  float: left;
+  padding: 10px 0 10px 10px;
+}
+
+nav { 
+  clear: left; 
+}
+  
+/*****************************************************
+styles for main menu, dropdown menus, and menu items;
+two groups of links: main menu, and dropdown menus   */
+
+/* for the always-visible main menu options */
+.Links li {
+  float: left;
+  width: 127px;
+  border-right: 1px solid #000;
+  font-weight: bold;
+  font-size: .7em;
+  text-align: center;
+  list-style: none;
+}
+
+.Links li:last-child {
+  width: 132px;
+  border-right-width: 0;
+}
+ 
+/* for all links for all menu options */
+.Links li a, 
+.Links li span 
+{
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  background-color: #EAD80A;
+  color: #000;
+  text-decoration: none;
+}
+
+.Links li a:hover {
+  background-color: #CE0000;
+  color: #FFF;
+}
+
+/* for the dropdown menu options */
+.Links div {
+  position: absolute;
+  background-color: #EAD80A;
+  visibility: hidden;
+}
+
+.Links div a {
+  display: block;
+  width: 124px;
+  margin-top: 2px;
+  padding-left: 3px;
+  background-color: #EAD80A;
+  color: #000;
+  text-align: left;
+}
+
+/*********************************
+two kinds of menus: main and sub */
+
+/* appears below logo on every page */
+nav#mainMenu { width: 100%; }
+
+/* appears at left in content area on some pages */
+nav#subMenu { 
+  float: left;
+  width: 128px;
+}
+
+/*******************************************************************
+only home page has text at left and image at right in content area */
+article#textLeft {
+  float: left;
+  width: 63%;
+  margin-left: 1em;
+}
+
+div#image {
+  float: left;
+  width: 33%;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/*******************************************************
+pages with submenus at the left have text at the right */
+article#textRight {
+  float: left;
+  width: 750px;
+  margin-left: 10px;
+}
+
+/*****************************************************
+some pages may contain only text following a heading */
+article#textOnly {
+  float: left;
+  width: 95%;
+  margin-left: 1em;
+}
+
+/********************************************
+move the site map list away from the border */
+article#siteMap { margin-left: 10px; }
+
+/*****************************************************************
+list structure must be restored for the site map page, since all
+padding and margins have been removed by the global settings     */
+article#siteMap ol,
+article#siteMap ul {
+  margin: 0 30px 10px;
+}
+
+/********************************************
+footer now contains just a copyright notice */
+footer {
+  clear: left;
+  width: 100%;
+  height: 25px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  line-height: 25px;
+  background-color: #EAD80A;
+  color: #000;
+  text-align: center;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+/********************************************
+feedback form */
+.form {
+  background-color: #FFB;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 5px 5px #000;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.Centered { text-align: center; }
+
+.RightAligned { text-align: right; }
+
+select, input, textarea { 
+  height: 24px; 
+  color: white;
+  font-size: 14px;
+  background-color: #e60000; 
+  
+  }
+  
+/********************************************************
+for the welcome message at the upper right of each page */
+div#welcome {
+  float: right;
+  padding-right: 10px;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+div#welcome h5 { margin-top: 1em; }
+
+
